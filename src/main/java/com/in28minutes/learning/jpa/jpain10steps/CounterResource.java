@@ -1,6 +1,8 @@
 package com.in28minutes.learning.jpa.jpain10steps;
 
 import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.time.temporal.ChronoUnit;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,12 +17,12 @@ public class CounterResource {
 	@GetMapping(path="/")
 	public String helloWorld() {
 		
-		LocalDateTime meetingDate = LocalDateTime.of(2019,6,15,19,0);
-		LocalDateTime nowDate =  LocalDateTime.now();
+		ZonedDateTime meetingDate = LocalDateTime.of(2019,6,15,19,0).atZone(ZoneId.of("Europe/Warsaw"));
+		ZonedDateTime nowDate =  LocalDateTime.now().atZone(ZoneId.of("Europe/Warsaw"));
 		
 		if (meetingDate.isAfter(nowDate)) {
 
-			LocalDateTime tempDateTime = LocalDateTime.from( nowDate );
+			ZonedDateTime tempDateTime = ZonedDateTime.from( nowDate );
 
 			long years = tempDateTime.until( meetingDate, ChronoUnit.YEARS);
 			tempDateTime = tempDateTime.plusYears( years );
