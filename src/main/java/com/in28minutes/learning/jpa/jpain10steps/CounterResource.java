@@ -18,7 +18,7 @@ public class CounterResource {
 	public String helloWorld() {
 		
 		ZonedDateTime meetingDate = LocalDateTime.of(2019,6,15,19,0).atZone(ZoneId.of("Europe/Warsaw"));
-		ZonedDateTime nowDate =  LocalDateTime.now().atZone(ZoneId.of("Europe/Warsaw"));
+		ZonedDateTime nowDate =  LocalDateTime.now(ZoneId.of("Europe/Warsaw")).atZone(ZoneId.of("Europe/Warsaw"));
 		
 		if (meetingDate.isAfter(nowDate)) {
 
