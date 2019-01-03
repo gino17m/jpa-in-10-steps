@@ -15,7 +15,7 @@ import ch.qos.logback.core.util.Duration;
 public class CounterResource {
 	
 	@GetMapping(path="/")
-	public String helloWorld() {
+	public String countTimeToMeeting() {
 		
 		ZonedDateTime meetingDate = LocalDateTime.of(2019,6,15,19,0).atZone(ZoneId.of("Europe/Warsaw"));
 		ZonedDateTime nowDate =  LocalDateTime.now(ZoneId.of("Europe/Warsaw")).atZone(ZoneId.of("Europe/Warsaw"));
