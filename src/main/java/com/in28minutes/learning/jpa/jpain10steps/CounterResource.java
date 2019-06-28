@@ -17,7 +17,7 @@ public class CounterResource {
 	@GetMapping(path="/")
 	public String countTimeToMeeting() {
 		
-		ZonedDateTime meetingDate = LocalDateTime.of(2019,6,15,19,0).atZone(ZoneId.of("Europe/Warsaw"));
+		ZonedDateTime meetingDate = LocalDateTime.of(2019,7,15,19,0).atZone(ZoneId.of("Europe/Warsaw"));
 		ZonedDateTime nowDate =  LocalDateTime.now(ZoneId.of("Europe/Warsaw")).atZone(ZoneId.of("Europe/Warsaw"));
 		
 		if (meetingDate.isAfter(nowDate)) {
