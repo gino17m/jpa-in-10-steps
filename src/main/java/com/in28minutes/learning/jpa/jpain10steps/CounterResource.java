@@ -43,7 +43,7 @@ public class CounterResource {
 			long seconds = tempDateTime.until( meetingDate, ChronoUnit.SECONDS);
 			
 			
-			return "<b>Do spotkania pozostało około: </b> " + months + " miesięcy, " + days + " dni, " + hours + " godzin, " + minutes + " minut, " + seconds + " sekund.";
+			return "<b>Yo yo yo, Do spotkania pozostało około: </b> " + months + " miesięcy, " + days + " dni, " + hours + " godzin, " + minutes + " minut, " + seconds + " sekund.";
 			
 		} else {
 			return "<b>Termin spotkania minął.</b>";
